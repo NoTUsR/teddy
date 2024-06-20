@@ -63,4 +63,3 @@ function animate() {
 	renderer.render( scene, camera );
 }
 renderer.setAnimationLoop( animate );
-alert("hui tebe tilda")
