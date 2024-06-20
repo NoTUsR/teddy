@@ -44,7 +44,7 @@ const loader = new GLTFLoader();
 
 loader.load('https://raw.githubusercontent.com/NoTUsR/teddy/main/Head.glb', function(gltf){
 
- teddy = gltf.scene
+ let teddy = gltf.scene
  
  teddy.traverse(n => { if ( n.isMesh ) {
   n.castShadow = true; 
