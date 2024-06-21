@@ -16,29 +16,14 @@ renderer.setPixelRatio(window.devicePixelRatio);
 
 container.appendChild( renderer.domElement );
 
-const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
-directionalLight.position.set( 0, 1, 1 );
-directionalLight.castShadow = true
-scene.add( directionalLight );
+const light1 = new THREE.AmbientLight('#FFFFFF', 0.3);
+light1.name = 'ambient_light';
+scene.add(light1);
 
-const light1 = new THREE.AmbientLight(0xFFFFFF, 1);
-scene.add(light1)
-
-//const light2 = new THREE.DirectionalLight( 0xffffff, 1 );
-//scene.add(light2)
-
-//const light3 = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
-//scene.add(light3)
-
-/*let light = new THREE.SpotLight(0xffa95c,1);
-light.position.set(-50,50,50);
-light.castShadow = true;
-light.shadow.bias = -0.0001;
-light.shadow.mapSize.width = 1024*4;
-light.shadow.mapSize.height = 1024*4;*/
-//scene.add( light );
-
-
+const light2 = new THREE.DirectionalLight('#FFFFFF', 0.8 * Math.PI);
+light2.position.set(0, 0, 0.866); // ~60º
+light2.name = 'main_light';
+scene.add(light2);
 const loader = new GLTFLoader();
 
 loader.load('https://raw.githubusercontent.com/NoTUsR/teddy/main/Head.glb', function(gltf){
