@@ -16,6 +16,10 @@ renderer.setPixelRatio(window.devicePixelRatio);
 
 container.appendChild( renderer.domElement );
 
+const light = new THREE.PointLight( 0xff0000, 1, 100 );
+light.position.set( 0, 1, 3 );
+scene.add( light );
+
 //const light1 = new THREE.AmbientLight(0xFFFFFF, 1);
 //scene.add(light1)
 
@@ -25,12 +29,12 @@ container.appendChild( renderer.domElement );
 //const light3 = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
 //scene.add(light3)
 
-let light = new THREE.SpotLight(0xffa95c,1);
+/*let light = new THREE.SpotLight(0xffa95c,1);
 light.position.set(-50,50,50);
 light.castShadow = true;
 light.shadow.bias = -0.0001;
 light.shadow.mapSize.width = 1024*4;
-light.shadow.mapSize.height = 1024*4;
+light.shadow.mapSize.height = 1024*4;*/
 //scene.add( light );
 
 
