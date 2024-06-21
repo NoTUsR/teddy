@@ -17,12 +17,12 @@ renderer.setPixelRatio(window.devicePixelRatio);
 container.appendChild( renderer.domElement );
 
 const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
-directionalLight.position.set( 0, 1, 3 );
+directionalLight.position.set( 0, 1, 1 );
 directionalLight.castShadow = true
 scene.add( directionalLight );
 
-//const light1 = new THREE.AmbientLight(0xFFFFFF, 1);
-//scene.add(light1)
+const light1 = new THREE.AmbientLight(0xFFFFFF, 1);
+scene.add(light1)
 
 //const light2 = new THREE.DirectionalLight( 0xffffff, 1 );
 //scene.add(light2)
