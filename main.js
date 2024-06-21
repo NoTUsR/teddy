@@ -14,22 +14,16 @@ renderer.setSize( width, height );
 renderer.physicallyCorrectLights = true
 renderer.setPixelRatio(window.devicePixelRatio);
 
-let pmremGenerator = new THREE.PMREMGenerator(renderer);
-pmremGenerator.compileEquirectangularShader();
-
-let model
-
-
 container.appendChild( renderer.domElement );
 
-const light1 = new THREE.AmbientLight(0xFFFFFF, 1);
-scene.add(light1)
+//const light1 = new THREE.AmbientLight(0xFFFFFF, 1);
+//scene.add(light1)
 
-const light2 = new THREE.DirectionalLight( 0xffffff, 1 );
-scene.add(light2)
+//const light2 = new THREE.DirectionalLight( 0xffffff, 1 );
+//scene.add(light2)
 
-const light3 = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
-scene.add(light3)
+//const light3 = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+//scene.add(light3)
 
 let light = new THREE.SpotLight(0xffa95c,1);
 light.position.set(-50,50,50);
