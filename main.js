@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 const container = document.querySelector('#teddy_container')
 let width = container.getBoundingClientRect().width
@@ -27,7 +28,7 @@ scene.add(light2);
 const loader = new GLTFLoader();
 
 const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath( 'https://cdn.jsdelivr.net/npm/draco-web-decoder@1.0.0/dist/index.min.js' );
+dracoLoader.setDecoderPath( 'https://www.gstatic.com/draco/v1/decoders/' );
 loader.setDRACOLoader( dracoLoader );
 
 loader.load('https://raw.githubusercontent.com/NoTUsR/teddy/main/Head.glb', function(gltf){
@@ -49,4 +50,4 @@ function animate() {
     
 	renderer.render( scene, camera );
 }
-renderer.setAnimationLoop( animate );
+renderer.setAnimationLoop( animate ); 
