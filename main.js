@@ -26,8 +26,11 @@ light2.name = 'main_light';
 scene.add(light2);
 const loader = new GLTFLoader();
 
-loader.load('https://raw.githubusercontent.com/NoTUsR/teddy/main/Head.glb', function(gltf){
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath( 'https://cdn.jsdelivr.net/npm/draco-web-decoder@1.0.0/dist/index.min.js' );
+loader.setDRACOLoader( dracoLoader );
 
+loader.load('https://raw.githubusercontent.com/NoTUsR/teddy/main/Head.glb', function(gltf){
  let teddy = gltf.scene
  
  teddy.traverse(n => { if ( n.isMesh ) {
